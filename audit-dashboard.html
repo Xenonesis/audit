@@ -655,9 +655,9 @@
 <body>
     <!-- Theme Toggle -->
     <div class="theme-toggle">
-        <button class="theme-btn active" onclick="setTheme('light')" title="Light Mode">☀️</button>
-        <button class="theme-btn" onclick="setTheme('dark')" title="Dark Mode">🌙</button>
-        <button class="theme-btn" onclick="setTheme('system')" title="System Default">💻</button>
+        <button class="theme-btn active" onclick="setTheme('light')" title="Light Mode">Light</button>
+        <button class="theme-btn" onclick="setTheme('dark')" title="Dark Mode">Dark</button>
+        <button class="theme-btn" onclick="setTheme('system')" title="System Default">Auto</button>
     </div>
 
     <div class="container">
@@ -1360,7 +1360,7 @@
 
         <!-- Footer -->
         <footer>
-            <p>🎯 Deep Crawl Analysis Complete - 100 Pages Analyzed, 2.63 MB Data Processed</p>
+            <p>Deep Crawl Analysis Complete - 100 Pages Analyzed, 2.63 MB Data Processed</p>
             <p>Focus on Phase 1 items first: Launch blog, optimize 6,974 images, fix security exposure for immediate impact.</p>
             <p style="margin-top: 24px; font-size: 0.9em; opacity: 0.7;">Audit conducted using Firecrawl deep crawling technology | AI-Powered Multi-Role Analysis | Data Source: .firecrawl/jusst4you-crawl.json</p>
         </footer>
@@ -1408,9 +1408,9 @@
             // Update active button
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                if ((savedTheme === 'light' && btn.textContent.includes('☀️')) ||
-                    (savedTheme === 'dark' && btn.textContent.includes('🌙')) ||
-                    (savedTheme === 'system' && btn.textContent.includes('💻'))) {
+                if ((savedTheme === 'light' && btn.textContent === 'Light') ||
+                    (savedTheme === 'dark' && btn.textContent === 'Dark') ||
+                    (savedTheme === 'system' && btn.textContent === 'Auto')) {
                     btn.classList.add('active');
                 }
             });
